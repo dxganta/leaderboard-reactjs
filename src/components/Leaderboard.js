@@ -5,10 +5,11 @@ import LoadingBar from "./LoadingBar";
 
 const Leaderboard = () => {
   const [holders, setHolders] = useState([]);
+  const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
-    try {
-      async function fetchData() {
+    async function fetchData() {
+      try {
         const res = await fetch(
           "https://leaderboard-backend-acz8.onrender.com/holders",
           {
@@ -18,14 +19,21 @@ const Leaderboard = () => {
         const data = await res.json();
 
         setHolders(data);
+      } catch (err) {
+        setErrorMsg(err.message);
       }
+    }
 
-      fetchData();
-    } catch (err) {}
+    fetchData();
   }, []);
 
   if (holders.length === 0) {
-    return <LoadingBar />;
+    return (
+      <div>
+        {errorMsg && <div className="alert alert-error"> {errorMsg} </div>}
+        {!errorMsg && <LoadingBar />}
+      </div>
+    );
   }
 
   return (
