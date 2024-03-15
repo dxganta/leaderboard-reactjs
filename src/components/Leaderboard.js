@@ -3,35 +3,44 @@ import { useState, useEffect } from "react";
 
 import LoadingBar from "./LoadingBar";
 
-const Leaderboard = () => {
+const databaseUrl = "https://leaderboard-backend-acz8.onrender.com";
+
+const Leaderboard = ({ vault }) => {
   const [holders, setHolders] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch(
-          "https://leaderboard-backend-acz8.onrender.com/holders",
-          {
-            method: "GET",
-          }
-        );
+        setLoading(true);
+        const res = await fetch(`${databaseUrl}/holders/${vault}`, {
+          method: "GET",
+        });
         const data = await res.json();
 
         setHolders(data);
       } catch (err) {
         setErrorMsg(err.message);
+      } finally {
+        setLoading(false);
       }
     }
-
     fetchData();
-  }, []);
+  }, [vault]);
 
-  if (holders.length === 0) {
+  if (loading) {
     return (
       <div>
-        {errorMsg && <div className="alert alert-error"> {errorMsg} </div>}
-        {!errorMsg && <LoadingBar />}
+        <LoadingBar />
+      </div>
+    );
+  }
+
+  if (errorMsg) {
+    return (
+      <div>
+        <div className="alert alert-error"> {errorMsg} </div>
       </div>
     );
   }
