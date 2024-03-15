@@ -46,7 +46,7 @@ const QuartzAccumulation = () => {
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="card-title">Amazing! 🤑</h2>
-          <p>You are earning {quartzPerDay} quartz per day</p>
+          <div>You are earning {quartzPerDay} quartz per day</div>
           <div className="card-actions justify-end">
             <button
               onClick={() => {
@@ -66,8 +66,8 @@ const QuartzAccumulation = () => {
   if (quartzPerDay === 0 && isUnusedAddress) {
     return (
       <div className="card bg-base-100 shadow-xl">
-        <div className="card-body">
-          <h2 className="card-title">That sucks! 😔</h2>
+        <div className="card-body text-center">
+          <h2 className="text-xl font-semibold">That sucks! 😔</h2>
           <p>You are missing out on a lot of yield</p>
           <div className="card-actions flex space-x-2">
             <a
@@ -98,7 +98,7 @@ const QuartzAccumulation = () => {
   return (
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body self-center">
-        <h2 className="card-title">
+        <h2 className="card-title text-center">
           Check the amount of quartz you are earning per day
         </h2>
         <input

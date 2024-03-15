@@ -48,7 +48,7 @@ const Leaderboard = ({ vault }) => {
   return (
     <div className="overflow-x-auto">
       <table className="table">
-        <thead>
+        <thead className="font-bold text-sm">
           <tr>
             <th>Serial No.</th>
             <th>Address</th>
@@ -56,7 +56,7 @@ const Leaderboard = ({ vault }) => {
             <th>Quartz Received</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="text-base">
           {holders.map((holder, index) => (
             <tr key={holder.address}>
               <td>{index + 1}</td>
