@@ -112,7 +112,7 @@ const QuartzAccumulation = () => {
         </h2>
         <input
           type="text"
-          placeholder="Address"
+          placeholder="Address or ENS"
           className="input input-bordered w-full max-w"
           value={address}
           onChange={(e) => updateAddress(e)}
