@@ -99,7 +99,16 @@ const QuartzAccumulation = () => {
     <div className="card bg-base-100 shadow-xl">
       <div className="card-body self-center">
         <h2 className="card-title text-center">
-          Check the amount of quartz you are earning per day
+          Check the amount of{" "}
+          <a
+            className="underline underline-offset-2 hover:text-primary"
+            href="https://coinmarketcap.com/currencies/sandclock/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Quartz
+          </a>{" "}
+          you are earning per day
         </h2>
         <input
           type="text"
