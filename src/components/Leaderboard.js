@@ -5,6 +5,12 @@ import LoadingBar from "./LoadingBar";
 
 const databaseUrl = "https://leaderboard-backend-acz8.onrender.com";
 
+const vaultToToken = {
+  sceth: "ETH",
+  scusdc: "USDC",
+  sclusd: "LUSD",
+};
+
 const Leaderboard = ({ vault }) => {
   const [holders, setHolders] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
@@ -52,7 +58,7 @@ const Leaderboard = ({ vault }) => {
           <tr>
             <th>Serial No.</th>
             <th>Address</th>
-            <th>TVL (ETH)</th>
+            <th>TVL ({vaultToToken[vault]})</th>
             <th>Quartz Received</th>
           </tr>
         </thead>
