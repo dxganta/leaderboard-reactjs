@@ -16,9 +16,9 @@ function App() {
           onChange={(e) => setVault(e.target.value)}
           className="mr-2 rounded-md px-1 py-1 shadow-sm ring-inset ring-gray-300 hover:bg-black bg-inherit border-white border-2"
         >
-          <option value="sceth">scEth</option>
-          <option value="scusdc">scUsdc</option>
-          <option value="sclusd">scLusd</option>
+          <option value="sceth">scETH</option>
+          <option value="scusdc">scUSDC</option>
+          <option value="sclusd">scLUSD</option>
         </select>
         Leaderboard
       </div>
