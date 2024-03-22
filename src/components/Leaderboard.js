@@ -25,6 +25,9 @@ const Leaderboard = ({ vault }) => {
         });
         const data = await res.json();
 
+        // Sort holders by quartz points
+        data.sort((a, b) => b.quartzPoints - a.quartzPoints);
+
         setHolders(data);
       } catch (err) {
         setErrorMsg(err.message);
@@ -60,6 +63,7 @@ const Leaderboard = ({ vault }) => {
             <th>Address</th>
             <th>TVL ({vaultToToken[vault]})</th>
             <th>Quartz Received</th>
+            <th>Quartz Points</th>
           </tr>
         </thead>
         <tbody className="text-base">
@@ -69,6 +73,7 @@ const Leaderboard = ({ vault }) => {
               <td>{holder.address}</td>
               <td>{holder.balance.toFixed(2)}</td>
               <td>{holder.airdrop.toFixed(2)}</td>
+              <td>{holder.quartzPoints.toFixed(2)}</td>
             </tr>
           ))}
         </tbody>
