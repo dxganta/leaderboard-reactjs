@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 import LoadingBar from "./LoadingBar";
+import PaginationButton from "./PaginationButton";
 
 const databaseUrl = "https://leaderboard-backend-acz8.onrender.com";
 
@@ -15,6 +16,19 @@ const Leaderboard = ({ vault }) => {
   const [holders, setHolders] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  // const [itemsPerPage, setItemsPerPage] = useState(10);
+
+  const itemsPerPage = 10;
+
+  const totalPages = Math.ceil(holders.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentItems = holders.slice(startIndex, endIndex);
+
+  const onPageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -67,9 +81,9 @@ const Leaderboard = ({ vault }) => {
           </tr>
         </thead>
         <tbody className="text-base">
-          {holders.map((holder, index) => (
+          {currentItems.map((holder, index) => (
             <tr key={holder.address}>
-              <td>{index + 1}</td>
+              <td>{index + 1 + (currentPage - 1) * 10}</td>
               <td>{holder.address}</td>
               <td>{holder.balance.toFixed(2)}</td>
               <td>{holder.airdrop.toFixed(2)}</td>
@@ -78,6 +92,16 @@ const Leaderboard = ({ vault }) => {
           ))}
         </tbody>
       </table>
+      <div className="join">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <PaginationButton
+            key={index + 1}
+            pageNumber={index + 1}
+            onPageChange={onPageChange}
+            currentPage={currentPage}
+          />
+        ))}
+      </div>
     </div>
   );
 };
