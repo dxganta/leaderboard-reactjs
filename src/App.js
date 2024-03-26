@@ -3,6 +3,7 @@ import "./App.css";
 
 import Leaderboard from "./components/Leaderboard";
 import QuartzAccumulation from "./components/QuartzAccumulation";
+import Faq from "./components/Faq";
 
 function App() {
   const [vault, setVault] = useState("sceth");
@@ -23,6 +24,7 @@ function App() {
         Leaderboard
       </div>
       <Leaderboard vault={vault} />
+      <Faq />
     </main>
   );
 }
