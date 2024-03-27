@@ -13,7 +13,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="grow font-semibold text-2xl text-white">
-        Quartz Airdrop Leaderboard
+        QUARTZ Airdrop Leaderboard
       </div>
     </div>
   );

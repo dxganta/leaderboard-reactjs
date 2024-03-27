@@ -46,7 +46,7 @@ const QuartzAccumulation = () => {
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="card-title">Amazing! 🤑</h2>
-          <div>You are earning {quartzPerDay} quartz per day</div>
+          <div>You are earning {quartzPerDay} QUARTZ per day</div>
           <div className="card-actions justify-end">
             <button
               onClick={() => {
@@ -106,7 +106,7 @@ const QuartzAccumulation = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Quartz
+            QUARTZ
           </a>{" "}
           you are earning per day
         </h2>

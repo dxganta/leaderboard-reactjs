@@ -76,8 +76,8 @@ const Leaderboard = ({ vault }) => {
             <th>Serial No.</th>
             <th>Address</th>
             <th>TVL ({vaultToToken[vault]})</th>
-            <th>Quartz Received</th>
-            <th>Quartz Points</th>
+            <th>QUARTZ Received</th>
+            <th>QUARTZ Points</th>
           </tr>
         </thead>
         <tbody className="text-base">

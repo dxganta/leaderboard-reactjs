@@ -10,8 +10,8 @@ const Faq = () => {
         answer="The total amount of assets you have deposited into the respective vault."
       />
       <FaqAccordion
-        question="What are Quartz Points?"
-        answer="The amount of quartz you have earned in the current month. These will be distributed to your wallet at the end of the current month. 1 QUARTZ POINT = 1 QUARTZ. The leaderboard is updated every 24 hrs. So come again tomorrow to see how much your quartz points has grown. "
+        question="What are QUARTZ Points?"
+        answer="The amount of QUARTZ you have earned in the current month. These will be distributed to your wallet at the end of the current month. 1 QUARTZ POINT = 1 QUARTZ. The leaderboard is updated every 24 hrs. So come again tomorrow to see how much your QUARTZ points has grown. "
       />
       <FaqAccordion
         question="How frequently is the leaderboard data updated?"
@@ -19,8 +19,8 @@ const Faq = () => {
       />
 
       <FaqAccordion
-        question="What is 'Quartz Received'?"
-        answer="The total amount of quartz that has been sent to the wallet till now."
+        question="What is 'QUARTZ Received'?"
+        answer="The total amount of QUARTZ that has been sent to the wallet till now."
       />
     </div>
   );
