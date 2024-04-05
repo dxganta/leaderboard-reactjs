@@ -2,19 +2,26 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-300 px-10 py-2">
-      <div className="flex-1">
-        <a
-          href="https://app.sandclock.org/"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="navbar flex justify-center">
+      <a
+        href="https://app.sandclock.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="sandclock.png" alt="Sandclock" />
+      </a>
+      <a
+        href="https://app.sandclock.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button
+          // onClick={handleClick}
+          className="mr-8 btn hover:text-white hover:bg-black border-2 absolute rounded-[57px] right-0 text-neutral-800 bg-white text-base font-normal"
         >
-          <img src="sandclock.png" alt="Sandclock" />
-        </a>
-      </div>
-      <div className="grow font-semibold text-2xl text-white">
-        QUARTZ Airdrop Leaderboard
-      </div>
+          Earn Yield
+        </button>
+      </a>
     </div>
   );
 };

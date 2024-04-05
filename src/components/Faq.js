@@ -3,8 +3,8 @@ import FaqAccordion from "./FaqAccordion";
 
 const Faq = () => {
   return (
-    <div className="w-3/5">
-      <h1 className="text-center pt-10 text-3xl font-bold">FAQ</h1>
+    <div className="w-3/5 font-aeonik text-white">
+      <h1 className="text-black pt-20 pl-3 text-base font-normal">FAQ's</h1>
       <FaqAccordion
         question="What is TVL?"
         answer="The total amount of assets you have deposited into the respective vault."
