@@ -2,6 +2,6 @@
 
 Todos:
 
-1. Subdomain => leaderboard.sandclock.app
-2. airdrop calculation disclaimer at bottom
-3. Quartz Points Column
+1. airdrop calculation disclaimer at bottom
+2. Script for Automatic update every 24 hrs
+3. ENS main name show
