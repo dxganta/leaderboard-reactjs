@@ -12,6 +12,119 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a44facc2ede76_Aeonik-Air.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a4415d82ede6f_Aeonik-BoldItalic.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a441b062ede77_Aeonik-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a4409692ede64_Aeonik-AirItalic.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a44308d2ede6d_Aeonik-Black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a444a162ede6c_Aeonik-BlackItalic.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a447d7e2ede70_Aeonik-LightItalic.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a4468292ede71_Aeonik-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a447f792ede73_Aeonik-RegularItalic.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a442eb42ede72_Aeonik-MediumItalic.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a4463512ede78_Aeonik-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a446dc22ede75_Aeonik-ThinItalic.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a446c2d2ede6e_Aeonik-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://uploads-ssl.webflow.com/621e859deb0a446ac12ede36/621e859deb0a44242a2ede74_Aeonik-Thin.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

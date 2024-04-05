@@ -8,8 +8,13 @@ import Navbar from "./components/Navbar";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Navbar />
-    <App />
+    <div className="bg-beige">
+      <Navbar />
+      <div className="flex justify-center text-5xl font-aeonik text-neutral-800 font-normal pt-10">
+        Quartz Airdrop Leaderboard
+      </div>
+      <App />
+    </div>
   </React.StrictMode>
 );
 

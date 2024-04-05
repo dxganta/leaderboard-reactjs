@@ -69,22 +69,22 @@ const Leaderboard = ({ vault }) => {
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto font-aeonik text-black">
       <table className="table">
-        <thead className="font-bold text-sm">
+        <thead className="text-base text-black">
           <tr>
-            <th>Serial No.</th>
-            <th>Address</th>
-            <th>TVL ({vaultToToken[vault]})</th>
-            <th>QUARTZ Received</th>
-            <th>QUARTZ Points</th>
+            <th className="font-normal">Serial No.</th>
+            <th className="font-normal">Address</th>
+            <th className="font-normal">TVL ({vaultToToken[vault]})</th>
+            <th className="font-normal">QUARTZ Received</th>
+            <th className="font-normal">QUARTZ Points</th>
           </tr>
         </thead>
         <tbody className="text-base">
           {currentItems.map((holder, index) => (
-            <tr key={holder.address}>
+            <tr key={holder.address} className="rounded-2xl border-0 py-2">
               <td>{index + 1 + (currentPage - 1) * 10}</td>
-              <td>{holder.address}</td>
+              <td>{holder.ens}</td>
               <td>{holder.balance.toFixed(2)}</td>
               <td>{holder.airdrop.toFixed(2)}</td>
               <td>{holder.quartzPoints.toFixed(2)}</td>
