@@ -2,7 +2,7 @@ import React from "react";
 
 const FaqAccordion = ({ question, answer }) => {
   return (
-    <div className="collapse collapse-arrow bg-base-200 my-3">
+    <div className="collapse collapse-arrow bg-neutral-800 my-3">
       <input type="radio" name="my-accordion-2" />
       <div className="collapse-title text-base font-normal">{question}</div>
       <div className="collapse-content">
