@@ -4,6 +4,13 @@ import { useState, useEffect } from "react";
 import LoadingBar from "./LoadingBar";
 import PaginationButton from "./PaginationButton";
 
+const shortenAddress = (address) => {
+  if (address.length < 10) {
+    return address;
+  }
+  return `${address.slice(0, 6)}...${address.slice(-3)}`;
+};
+
 const databaseUrl = "https://leaderboard-backend-acz8.onrender.com";
 
 const vaultToToken = {
@@ -69,22 +76,25 @@ const Leaderboard = ({ vault }) => {
   }
 
   return (
-    <div className="overflow-x-auto font-aeonik text-black">
-      <table className="table">
-        <thead className="text-base text-black">
-          <tr>
-            <th className="font-normal">Serial No.</th>
+    <div className="font-aeonik text-black margin-x-auto w-fit">
+      <table className="table margin-x-auto">
+        <thead className="text-black">
+          <tr className="text-sm sm:text-base">
+            <th className="hidden font-normal sm:table-cell">Serial No.</th>
             <th className="font-normal">Address</th>
             <th className="font-normal">TVL ({vaultToToken[vault]})</th>
             <th className="font-normal">QUARTZ Received</th>
             <th className="font-normal">QUARTZ Points</th>
           </tr>
         </thead>
-        <tbody className="text-base">
+        <tbody className="text-sm sm:text-base">
           {currentItems.map((holder, index) => (
             <tr key={holder.address} className="rounded-2xl border-0 py-2">
-              <td>{index + 1 + (currentPage - 1) * 10}</td>
-              <td>{holder.ens}</td>
+              <td className="hidden sm:table-cell">
+                {index + 1 + (currentPage - 1) * 10}
+              </td>
+              <td className="sm:hidden">{shortenAddress(holder.ens)}</td>
+              <td className="hidden sm:table-cell">{holder.ens}</td>
               <td>{holder.balance.toFixed(2)}</td>
               <td>{holder.airdrop.toFixed(2)}</td>
               <td>{holder.quartzPoints.toFixed(2)}</td>
