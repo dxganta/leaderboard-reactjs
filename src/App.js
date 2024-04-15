@@ -8,7 +8,7 @@ import Faq from "./components/Faq";
 function App() {
   const [vault, setVault] = useState("sceth");
   return (
-    <main className="flex flex-col justify-between p-12 font-aeonik object-cover items-center">
+    <main className="flex flex-col justify-between p-12 font-aeonik object-cover md:items-center">
       <QuartzAccumulation />
       <div className="py-10 text-neutral-800 text-base font-normal">
         <select
