@@ -14,6 +14,7 @@ const Navbar = () => {
         href="https://app.sandclock.org/"
         target="_blank"
         rel="noopener noreferrer"
+        className="invisible md:visible"
       >
         <button
           // onClick={handleClick}
