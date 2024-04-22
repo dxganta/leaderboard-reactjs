@@ -10,7 +10,7 @@ function App() {
   const [vault, setVault] = useState("sceth");
   return (
     <main className="flex flex-col justify-between p-12 font-aeonik object-cover">
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col md:flex-row md:justify-between">
         <QuartzAccumulation />
         <TotalQuartz />
       </div>

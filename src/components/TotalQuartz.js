@@ -22,7 +22,7 @@ const TotalQuartz = () => {
   }, []);
 
   return (
-    <div className="flex flex-col bg-white rounded-3xl px-6 justify-center max-h-min">
+    <div className="flex flex-col bg-white rounded-3xl px-6 justify-center max-h-min max-w-fit mt-6 p-6">
       <div className="text-neutral-800 text-base font-normal pb-6">
         Total QUARTZ distributed
       </div>
