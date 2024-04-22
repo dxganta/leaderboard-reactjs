@@ -3,7 +3,7 @@ import FaqAccordion from "./FaqAccordion";
 
 const Faq = () => {
   return (
-    <div className="sm:w-3/5 font-aeonik text-white">
+    <div className="sm:w-3/5 font-aeonik text-white self-center">
       <h1 className="text-black pt-20 pl-3 text-base font-normal">FAQ's</h1>
       <FaqAccordion
         question="What is TVL?"

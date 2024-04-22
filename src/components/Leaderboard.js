@@ -3,21 +3,7 @@ import { useState, useEffect } from "react";
 
 import LoadingBar from "./LoadingBar";
 import PaginationButton from "./PaginationButton";
-
-const shortenAddress = (address) => {
-  if (address.length < 10) {
-    return address;
-  }
-  return `${address.slice(0, 6)}...${address.slice(-3)}`;
-};
-
-const databaseUrl = "https://leaderboard-backend-acz8.onrender.com";
-
-const vaultToToken = {
-  sceth: "ETH",
-  scusdc: "USDC",
-  sclusd: "LUSD",
-};
+import { shortenAddress, vaultToToken, databaseUrl } from "../utils";
 
 const Leaderboard = ({ vault }) => {
   const [holders, setHolders] = useState([]);
@@ -76,7 +62,7 @@ const Leaderboard = ({ vault }) => {
   }
 
   return (
-    <div className="font-aeonik text-black margin-x-auto w-fit">
+    <div className="font-aeonik text-black margin-x-auto">
       <table className="table margin-x-auto">
         <thead className="text-black">
           <tr className="text-sm sm:text-base">
