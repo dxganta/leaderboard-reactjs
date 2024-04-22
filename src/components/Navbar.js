@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="navbar flex justify-center">
+    <div className="navbar flex flex-row justify-between pl-12">
       <a
         href="https://app.sandclock.org/"
         target="_blank"
@@ -18,7 +18,7 @@ const Navbar = () => {
       >
         <button
           // onClick={handleClick}
-          className="mr-8 btn hover:text-white hover:bg-black border-2 absolute rounded-[57px] right-0 text-neutral-800 bg-white text-base font-normal"
+          className="mr-8 btn hover:text-white hover:bg-black border-2 rounded-[57px] right-0 text-neutral-800 bg-white text-base font-normal"
         >
           Earn Yield
         </button>

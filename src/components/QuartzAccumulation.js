@@ -85,7 +85,13 @@ const QuartzAccumulation = () => {
 
   return (
     <div className="font-aeonik flex flex-col space-y-2">
-      <div className="flex flex-row flex-wrap justify-center gap-x-2 text-center text-neutral-600 text-base font-normal pb-7">
+      <div
+        className="flex
+       text-5xl font-aeonik text-neutral-800 font-normal pb-4"
+      >
+        Quartz Airdrop Leaderboard
+      </div>
+      <div className="flex flex-row flex-wrap gap-x-2 text-neutral-600 text-base font-normal pb-7">
         Check the amount of{" "}
         <a
           className="flex flex-row gap-x-0.5 underline underline-offset-2 hover:text-primary"

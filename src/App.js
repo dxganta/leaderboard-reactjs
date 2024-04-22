@@ -4,12 +4,16 @@ import "./App.css";
 import Leaderboard from "./components/Leaderboard";
 import QuartzAccumulation from "./components/QuartzAccumulation";
 import Faq from "./components/Faq";
+import TotalQuartz from "./components/TotalQuartz";
 
 function App() {
   const [vault, setVault] = useState("sceth");
   return (
-    <main className="flex flex-col justify-between p-12 font-aeonik object-cover md:items-center">
-      <QuartzAccumulation />
+    <main className="flex flex-col justify-between p-12 font-aeonik object-cover">
+      <div className="flex flex-row justify-between">
+        <QuartzAccumulation />
+        <TotalQuartz />
+      </div>
       <div className="py-10 text-neutral-800 text-base font-normal">
         <select
           value={vault}
