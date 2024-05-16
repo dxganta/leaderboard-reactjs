@@ -33,7 +33,7 @@ const Leaderboard = ({ vault }) => {
         const data = await res.json();
 
         // Sort holders by quartz points
-        data.sort((a, b) => b.quartzPoints - a.quartzPoints);
+        data.sort((a, b) => b.balance - a.balance);
 
         setHolders(data);
       } catch (err) {
